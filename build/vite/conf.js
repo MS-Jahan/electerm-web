@@ -7,7 +7,7 @@ import def from './def.js'
 import commonjs from 'vite-plugin-commonjs'
 // import externalGlobals from 'rollup-plugin-external-globals'
 
-function buildInput () {
+function buildInput() {
   return {
     electerm: resolve(cwd, 'src/client/entry-web/index.jsx'),
     basic: resolve(cwd, 'src/client/entry-web/basic.js'),
@@ -123,12 +123,13 @@ export default defineConfig({
           'zmodem.js': ['zmodem.js'],
           'vscode-icons-js': ['vscode-icons-js'],
           'react-utils': ['react', 'react-colorful', 'react-delta', 'memoize-one', 'prop-types']
+        }
       }
-    }
-  },
-  resolve: {
-    alias: {
-      events: 'eventemitter3'
+    },
+    resolve: {
+      alias: {
+        events: 'eventemitter3'
+      }
     }
   }
 })
